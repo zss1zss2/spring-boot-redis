@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    include: default
+---
+spring:
+  profiles: dev
+  redis:
+    cluster:
+      nodes: 55.14.8.93:6379,55.14.8.92:6379,55.14.8.91:6379,55.14.8.93:8888,55.14.8.92:8888,55.14.8.91:8888
+      password: Kl8tWZqDhhrwLcA2_H-Hytz6Y67Qw_N1
+spring.profiles.include: cmbredis
+---

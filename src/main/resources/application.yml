@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/emall_api_jensen?useSSL=false&characterEncoding=utf8
+    username: root
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+---
+spring:
+  profiles: dev
+  redis:
+    cluster:
+      nodes: 55.14.8.93:6379,55.14.8.92:6379,55.14.8.91:6379,55.14.8.93:8888,55.14.8.92:8888,55.14.8.91:8888
+      password: Kl8tWZqDhhrwLcA2_H-Hytz6Y67Qw_N1
+  datasource:
+    url: jdbc:mysql://47.107.183.220:3306/test_for_first?serverTimezone=GMT&useSSL=false&characterEncoding=utf8
+    username: test_for_first
+    password: D6J4PsRCCf
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+spring.profiles.include: cmbredis
+---
