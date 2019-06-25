@@ -39,7 +39,7 @@ public class RedisConfig {
     }
 
     @Bean
-    @Profile("cmbredis")
+    @Profile("profileRedis")
     public RedisConnectionFactory clusterRedisFactory(){
         JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory(new RedisClusterConfiguration(nodes), new JedisPoolConfig());
         jedisConnectionFactory.setPassword(password);
